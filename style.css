@@ -1,0 +1,280 @@
+/* ============================================================
+   The Heineman Foundation — Stylesheet
+   Palette is intentionally grayscale (see brief). If you ever
+   want to add color, the two spots to touch are --line and
+   --mark below.
+   ============================================================ */
+
+:root {
+  --bg: #faf9f7;
+  --card: #ffffff;
+  --ink: #1a1a18;
+  --ink-soft: #55534d;
+  --line: #e3e1db;
+  --mark: #8a877e;
+  --max-width: 880px;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation: none !important; transition: none !important; }
+}
+
+a { color: inherit; }
+
+/* ---------- Header ---------- */
+
+header.site-header {
+  position: relative;
+  padding: 4.5rem 1.5rem 2.5rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 900px;
+  height: 900px;
+  transform: translate(-50%, -50%);
+  opacity: 0.035;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.brand {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.brand svg { width: 64px; height: 64px; flex-shrink: 0; }
+
+.brand-name {
+  text-align: left;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.35rem;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+.brand-name span {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 0.35rem;
+}
+
+nav.site-nav {
+  position: relative;
+  z-index: 1;
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+nav.site-nav a {
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+nav.site-nav a:hover,
+nav.site-nav a:focus-visible {
+  color: var(--ink);
+  border-color: var(--mark);
+}
+
+/* ---------- Layout ---------- */
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+section.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 3rem 3.25rem;
+  scroll-margin-top: 2rem;
+}
+
+@media (max-width: 640px) {
+  section.card { padding: 2.25rem 1.5rem; }
+}
+
+section.card h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.9rem;
+  text-align: center;
+  margin: 0 0 2rem;
+  letter-spacing: -0.01em;
+}
+
+section.card p {
+  margin: 0 0 1.15rem;
+  color: var(--ink);
+}
+
+section.card p:last-child { margin-bottom: 0; }
+
+section.card p.note {
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+section.card strong { font-weight: 650; }
+
+/* Interest list */
+ul.interests {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+ul.interests li {
+  position: relative;
+  padding-left: 1.35rem;
+}
+
+ul.interests li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--mark);
+}
+
+/* ---------- Board ---------- */
+
+.board-officers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem 1rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+@media (max-width: 640px) {
+  .board-officers { grid-template-columns: repeat(2, 1fr); }
+}
+
+.board-officers .officer { text-align: center; }
+
+.officer .role {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 0.4rem;
+}
+
+.officer .name { font-weight: 500; }
+
+.board-members {
+  columns: 2;
+  column-gap: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 560px) {
+  .board-members { columns: 1; }
+}
+
+.board-members .member {
+  break-inside: avoid;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+}
+
+.board-members .member:last-child { border-bottom: none; }
+
+.finance-star {
+  color: var(--mark);
+  margin-left: 0.15rem;
+}
+
+/* ---------- Contact ---------- */
+
+.contact-block {
+  text-align: center;
+}
+
+.contact-block a.mail {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 0.15rem;
+  transition: opacity 0.15s ease;
+}
+
+.contact-block a.mail:hover { opacity: 0.65; }
+
+/* ---------- Footer ---------- */
+
+footer {
+  text-align: center;
+  padding: 3rem 1.5rem 4rem;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+
+/* ---------- Focus states ---------- */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}

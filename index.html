@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Heineman Foundation</title>
+<meta name="description" content="The Heineman Foundation for Research, Education, Charitable and Scientific Purposes. Established 1948." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <!-- Faint background echo of the mark -->
+  <svg class="watermark" viewBox="0 0 200 200" aria-hidden="true">
+    <path d="M100 20 A80 80 0 0 1 100 180 A40 40 0 0 1 100 100 A40 40 0 0 0 100 20 Z" fill="currentColor"/>
+    <path d="M100 180 A80 80 0 0 1 100 20 A40 40 0 0 1 100 100 A40 40 0 0 0 100 180 Z" fill="currentColor" opacity="0.5"/>
+  </svg>
+
+  <div class="brand">
+    <svg viewBox="0 0 100 100" role="img" aria-label="The Heineman Foundation mark">
+      <path d="M50 8 A42 42 0 0 1 50 92 A21 21 0 0 1 50 50 A21 21 0 0 0 50 8 Z" fill="#4a4842"/>
+      <path d="M50 92 A42 42 0 0 1 50 8 A21 21 0 0 1 50 50 A21 21 0 0 0 50 92 Z" fill="#9a978d"/>
+    </svg>
+    <p class="brand-name">The Heineman<br/>Foundation<span>Est. 1948</span></p>
+  </div>
+
+  <nav class="site-nav" aria-label="Primary">
+    <a href="#history">History</a>
+    <a href="#board">Board</a>
+    <a href="#grants">Grants</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="card" id="history">
+    <h2>History</h2>
+    <p>The Heineman Foundation for Research, Education, Charitable and Scientific Purposes was established in 1948 by Dannie and Hettie Heineman. The purpose of the Foundation is to provide seed money to start-up projects and new projects within existing organizations for a maximum of three to five years.</p>
+    <p>The Foundation's general areas of interest are the following:</p>
+    <ul class="interests">
+      <li>Programs that enable economically challenged women to enter and remain in the workplace</li>
+      <li>Projects that will help prevent, reduce and/or eliminate the effects of climate change and global warming (including water degradation)</li>
+      <li>Live music performance for education and outreach</li>
+      <li>Research into prevention and treatment of childhood illnesses</li>
+      <li>Programs that enable youth to think, create, and communicate effectively</li>
+      <li>Programs that support and promote high achievement in music, science, and literature</li>
+    </ul>
+    <p class="note">The Heineman Foundation is a 501(c)3 organization.</p>
+  </section>
+
+  <section class="card" id="board">
+    <h2>Board</h2>
+    <div class="board-officers" id="board-officers">
+      <!-- rendered from assets/board.json -->
+    </div>
+    <div class="board-members" id="board-members">
+      <!-- rendered from assets/board.json -->
+    </div>
+    <p class="note" style="text-align:center;">(*) denotes Finance Committee members</p>
+  </section>
+
+  <section class="card" id="grants">
+    <h2>Grants</h2>
+    <p>The purpose of the Foundation is to provide <strong>seed money to start-up projects</strong> and <strong>new projects within existing organizations</strong> for a <strong>maximum of three to five years</strong>. We grant funding once a year, following our November board meeting. <strong>We do not give multi-year grants.</strong></p>
+    <p class="note">Low income communities having few financial means to provide their programs with long term support could be considered for funding beyond the five year limit.</p>
+    <p><strong>Grant proposals are by invitation only. We do not currently accept unsolicited grant proposals.</strong></p>
+    <p class="note">The Heineman Foundation is a 501(c)3 organization.</p>
+  </section>
+
+  <section class="card contact-block" id="contact">
+    <h2>Contact</h2>
+    <p>For inquiries, please reach us by email.</p>
+    <a class="mail" href="mailto:info@heinemanfoundation.org">info@heinemanfoundation.org</a>
+  </section>
+
+</main>
+
+<footer>
+  &copy; <span id="year"></span> The Heineman Foundation. All rights reserved.
+</footer>
+
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="assets/board.js"></script>
+</body>
+</html>
