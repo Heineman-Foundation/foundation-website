@@ -196,9 +196,6 @@ ul.interests li::before {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.75rem 1rem;
-  margin-bottom: 2.5rem;
-  padding-bottom: 2.5rem;
-  border-bottom: 1px solid var(--line);
 }
 
 @media (max-width: 640px) {
@@ -217,30 +214,6 @@ ul.interests li::before {
 }
 
 .officer .name { font-weight: 500; }
-
-.board-members {
-  columns: 2;
-  column-gap: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-
-@media (max-width: 560px) {
-  .board-members { columns: 1; }
-}
-
-.board-members .member {
-  break-inside: avoid;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--line);
-  text-align: center;
-}
-
-.board-members .member:last-child { border-bottom: none; }
-
-.finance-star {
-  color: var(--mark);
-  margin-left: 0.15rem;
-}
 
 /* ---------- Contact ---------- */
 

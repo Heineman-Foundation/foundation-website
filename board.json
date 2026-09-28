@@ -1,27 +1,8 @@
 {
   "officers": [
-    { "role": "President", "name": "Alexander Bergendahl", "finance": true },
-    { "role": "Vice President", "name": "Laurie Heineman", "finance": true },
-    { "role": "Treasurer", "name": "Anna Paternot", "finance": true },
-    { "role": "Secretary", "name": "Crista Bergendahl", "finance": false }
-  ],
-  "members": [
-    { "name": "David Bergendahl", "finance": true },
-    { "name": "Bettina Bergendahl", "finance": false },
-    { "name": "Agnes Gautier", "finance": true },
-    { "name": "Anders Bergendahl", "finance": true },
-    { "name": "Anna Paternot", "finance": false },
-    { "name": "Ann Podlipny", "finance": false },
-    { "name": "James Rose, Ph.D.", "finance": false },
-    { "name": "Joan Schur", "finance": false },
-    { "name": "Hunter Morris", "finance": false },
-    { "name": "June Morris", "finance": false },
-    { "name": "Madeleine Paternot", "finance": false },
-    { "name": "Marilyn Heineman", "finance": false },
-    { "name": "Mia Bergendahl", "finance": false },
-    { "name": "Michael Schur, M.D.", "finance": true },
-    { "name": "Molly Cummings", "finance": false },
-    { "name": "Simon Rose", "finance": false },
-    { "name": "Stephan Paternot", "finance": false }
+    { "role": "President", "name": "Alexander Bergendahl" },
+    { "role": "Vice President", "name": "Anna Paternot" },
+    { "role": "Treasurer", "name": "Laurie Heineman" },
+    { "role": "Secretary", "name": "Crista Bergendahl" }
   ]
 }
